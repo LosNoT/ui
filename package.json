@@ -1,27 +1,59 @@
 {
-  "name": "ui",
+  "name": "mlstarter",
+  "description": "Gatsby Machine Learning Starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "author": "Dan Shai. ",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-brands-svg-icons": "^5.3.1",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "@tensorflow/tfjs": "^0.12.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "chart.js": "^2.7.2",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-catch-links": "^1.0.24",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-remark-copy-linked-files": "^1.5.37",
+    "gatsby-remark-graph": "^0.2.2",
+    "gatsby-remark-katex": "^1.0.14",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-csv": "^1.3.11",
+    "gatsby-transformer-remark": "^1.7.44",
+    "mnist": "^1.1.0",
+    "prop-types": "^15.6.2",
+    "react-chartjs-2": "^2.7.4",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby ml machine learning tensorflow"
+  ],
+  "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "node --max_old_space_size=9206 ./node_modules/.bin/gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "deploy": "node --max_old_space_size=9206 ./node_modules/.bin/gatsby build --prefix-paths && gh-pages -d public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^1.2.0",
+    "prettier": "^1.13.7"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LosNoT/ui.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LosNoT/ui/issues"
-  },
-  "homepage": "https://github.com/LosNoT/ui#readme",
-  "dependencies": {
-    "next": "^6.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "url": "https://github.com/DanShai/Gatsby-Machine-Learning-Starter"
   }
 }
